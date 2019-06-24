@@ -1,6 +1,7 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -45,6 +46,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html'
-    })
+    }),
+    
   ]
 }
